@@ -1,0 +1,320 @@
+
+/* CSS for the centered rounded boxes with white background and black outline */
+
+body{
+    background-color : #FAF7F5
+}
+
+h1 {
+    font-family: 'Roboto Mono';
+    font-weight: normal;
+    font-size: 12px;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    text-align: center;
+    color: white; /* Text color */
+    background-color: black; /* Background color */
+    padding: 10px; /* Add padding to the text for readability */
+    width: fit-content;
+    display: inline-block; /* Center the h1 element within its container */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: normal;
+    text-align: center; 
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+    word-wrap: break-word; /* Breaks long words to prevent overflow */
+    line-height: 0;
+    font-size: 21px;
+    justify-content: center; 
+    align-items: center;
+    animation: fadeInUp ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    margin-bottom: 30px;
+    
+
+}
+
+small {
+    font-family: 'Bricolage Grotesque';
+    font-weight: lighter;
+}
+
+p {
+    font-family: 'Bricolage Grotesque';
+    font-weight: Bold;
+}
+
+.title-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+.typing-text {
+    border-radius: 5px; /* Add rounded corners */
+    visibility: hidden; /* Initially hidden */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding-top: 20px;
+    margin-bottom: 5px;
+    min-height: 40px;
+}
+
+.typing-text-container {
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    margin-right: 10px; /* Center horizontally */
+    max-height: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Establish a positioning context for the vertical line */
+    margin-top: 50px;
+}
+
+.rounded-box {
+    width: 90%; /* Adjust the width to make it responsive */
+    max-width: 500px; /* Limit the maximum width */
+    min-height: 100px;
+    background-color: #ffffff; /* White background */
+    border: 2px solid #000000; /* Black outline with 2px width */
+    border-radius: 10px; /* Adjust the border-radius for the desired roundness */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Add box shadow with offset */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px; /* Optional: Add padding inside the box */
+    color: #000000; /* Text color */
+    text-align: left; /* Align text to the left inside boxes */
+    position: relative; /* Position for connecting line */
+    opacity: 0; /* Initially set opacity to 0 for the fade-in effect */
+    transform: translateY(-20px); /* Initially move elements up by 20px */
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: transform 0.3s ease, background-color 1s ease; /* Add background-color to the transition */
+}
+
+/* Add a hover state to scale the box on hover */
+.rounded-box.zoomed {
+    transform: scale(1.1); /* Adjust the scale factor for zoom level */
+    transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+    background-color: #FDEBEA;
+}
+
+/* Add styles for the date-and-button container */
+.date-and-button {
+    display: flex;
+    justify-content: space-between; /* Align items in a row with space between */
+    align-items: center; /* Vertically center items */
+}
+
+/* CSS for the subheading (date) */
+.subheading {
+    font-weight: normal;
+    font-size: small;
+    font-family: 'Bricolage Grotesque';
+    margin-top: 0px; /* Remove default margin */
+    margin-bottom: 0px;
+}
+
+/* CSS for the content */
+.description {
+    margin-top: 10px; /* Spacing between date and content */
+    font-family: 'Bricolage Grotesque';
+    font-weight: bold;
+    animation: fadeInUp ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* CSS for the vertical line */
+.vertical-line {
+    opacity: 0;
+    width: 2px; /* Adjust the width of the vertical line */
+    background-color: #000000; /* Color of the vertical line (black in this example) */
+    height: 100px; /* Height of the vertical line (match the box height) */
+    margin-top: -20px;
+    margin-bottom: 0px;
+    padding: 0;
+    z-index: -1; /* Place the line in front of the boxes */
+}
+
+.external-link-button {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 0;
+    width: 25px; /* Adjust the width to make it smaller */
+    height: 25px; /* Adjust the height to make it square */
+    border-radius: 10%; /* Make the button rounded */
+    cursor: pointer;
+    font-size: 15px; /* Adjust the icon size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add styles for when the button is hovered or active (optional) */
+.external-link-button:hover {
+    background-color: #ededed; /* Change to a different color on hover */
+}
+
+.gold {
+    color: gold; /* Change the color to gold */
+}
+
+.bookmark-button {
+    display: inline-block;
+    vertical-align: middle; /* Vertically align the bookmark button */
+    padding: 10px 20px;
+    background-color: #A4CBB4; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    line-height: 1.2em; /* Set line-height to match the icon's height */
+
+}
+
+.bookmark-button:hover {
+    background-color: #7d9989; /* Darker blue on hover */
+}
+
+.bookmark-icon {
+    margin-right: 8px;
+    font-size: 24px; /* Adjust the icon size as needed */
+    line-height: 1.2em; /* Set line-height to match the icon's height */
+
+}
+
+.bookmark-text {
+    font-family: 'Bricolage Grotesque';
+}
+
+
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('fonts/BricolageGrotesque-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('fonts/BricolageGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold; 
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('fonts/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('fonts/RobotoMono-Light.ttf') format('truetype');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('fonts/RobotoMono-Bold.ttf') format('truetype');
+    font-weight: Bold;
+}
+
+/* Animation */ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 950px) {
+    .container {
+        margin-top: 50px; /* Adjust margin for smaller screens */
+    }
+
+    .title-container {
+        text-align: center; /* Title centered above the container on smaller screens */
+        margin-top: 0; /* Reset the margin to 0 for smaller screens */
+        margin-right: 40px;
+        position: relative;
+    }
+
+    h2 {
+        line-height: 1.4;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .rounded-box {
+        width: 60%; /* Adjust width for smaller screens */
+    }
+
+    .typing-text {
+        border-radius: 5px; /* Add rounded corners */
+        visibility: hidden; /* Initially hidden */
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        padding-bottom: 30px;
+        min-height: auto;
+
+    }
+}
+
+
+
+/* Animation for text */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start from a lower position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move text to its original position */
+    }
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0; /* Start with 0 width (text hidden) */
+    }
+    to {
+        width: 100%; /* End with full width (text visible) */
+    }
+}
+
+@keyframes blinking {
+    0%, 100% {
+        border-right: 2px solid transparent; /* Make cursor blink */
+    }
+    50% {
+        border-right: 2px solid white; /* Show cursor */
+    }
+}
